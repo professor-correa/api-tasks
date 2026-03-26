@@ -1,4 +1,4 @@
 export function logger(req, res, next) {
-    console.log(`${req.method} ${req.url}`)  
+    console.log(`middleware alert: ${req.method} ${req.url}`)  
     next() 
 }
