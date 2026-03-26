@@ -10,7 +10,7 @@ const PORT = 3000
 app.use(express.json())
 app.use(logger)
 
-app.get("health-check", async (req, res) => {
+app.get("/health-check", async (req, res) => {
     try {
         await pool.query("select 1")
         return res.status(200).send({
